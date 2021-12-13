@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Josiah01</title>
+  <meta name="description" content="Custom HTML5 video controls and WebVTT captions." />
+  <meta name="author" content="Bookers" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- PX-VIDEO CSS -->
+  <link rel="stylesheet" href="css/px-video.css" />
+
+  <style>
+    /*** for demo only ***/
+
+    #wrapper {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    #brand a,
+    p a {
+      border: 1px #fff dotted;
+    }
+
+    #brand a:focus,
+    p a:focus {
+      border: 1px #999 dotted;
+      outline: none;
+    }
+
+    p {
+      padding-top: 1em;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+    <div id="brand">
+      <!--<a href="accessible-html5-video-player"><img src="media/tree.jpg" width="30" height="80" alt="Booker open source"></a> -->
+    </div>
+
+    <h1><img src="images/QRCodes/qr-code-josiah01.png" width="80" height="90" alt="">Underwater</h1>
+
+    <div class="px-video-container" id="myvid">
+      <div class="px-video-img-captions-container">
+        <div class="px-video-captions hide"></div>
+        <div class="px-video-wrapper">
+          <video poster="media/josiah01shot.png" class="px-video" autoplay controls muted>
+      			<!-- video files -->
+      			<source src="media/josiah01.mp4" type="video/mp4" />
+
+      			<!-- fallback for browsers that don't support the video element -->
+      			<div>
+      				<a href="media/josiah01.mp4">
+      					<img src="media/josiah01shot.png" width="640" height="360" alt="download video" />
+      				</a>
+      			</div>
+      		</video>
+        </div>
+      </div>
+      <!-- end container for captions and video -->
+      <div class="px-video-controls"></div>
+    </div>
+    <!-- end video container -->
+
+  </div>
+  <!-- end page wrapper container -->
+  <script src="js/strings.js"></script>
+  <script src="js/px-video.js"></script>
+
+  <script>
+  // Initialize
+new InitPxVideo({
+  videoId: "myvid",
+  captionsOnDefault: false,
+  seekInterval: 15,
+  videoTitle: "josiah01",
+  debug: false
+});
+</script>
+
+</body>
+
+</html>
